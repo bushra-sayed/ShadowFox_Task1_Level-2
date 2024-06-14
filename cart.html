@@ -1,0 +1,211 @@
+<html>
+<head>
+    <title>PRODUCTS</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+   <script src="https://kit.fontawesome.com/5c9733a6aa.js" crossorigin="anonymous"></script>
+   <script src="script.js"></script>
+      <!--------------Products---------------->
+</head>
+<body>
+<header>
+    <div class="main">
+    <div class="logo">
+        <a href="index.html"><img src="images/Logo.jpg"></a>
+        </div>
+        <ul>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Products</a></li>
+            <li><a href="index.html">About Me</a></li> 
+            <li><a href="index.html">Contact Me</a></li>
+            <li><div class="icons">
+            <div class="cart-btn"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a></div>
+            </div></li>
+        </ul>
+        </div>
+        
+</header>
+<div id="contact">
+    <div class="container-1">
+        <div class="row">
+            <div class="contact-left">
+                <div class="Products-list">
+                <div class="image">
+                <img src="images/Bst gaming pc.jpg">
+                </div>
+                <div class="product">
+                 <h1>PC COMBO</h1>
+                 <p>$1899.00</p>
+                 <button class="Beta" onclick="addToCart('PC COMBO', 1899.00),showAlert1()">Add To Cart</button>
+                 </div>
+                </div>
+        <div class="Products-list">
+                    <div class="image">
+                           <img src="images/CPU 2.jpg">
+                    </div>
+                    <div class="product">
+                        <h1>CPU COMBO</h1>
+                        <p>$1299.00</p>
+                        <button class="Beta" onclick="addToCart('CPU COMBO', 1299.00),showAlert2()">Add To Cart</button>
+                </div>
+        </div>
+        <div class="Products-list">
+                    <div class="image">
+                           <img src="images/Mousepad.jpg">
+                    </div>
+                    <div class="product">
+                        <h1>MOUSEPAD</h1>
+                        <p>$2.29</p>
+                        <button class="Beta" onclick="addToCart('MOUSEPAD', 2.29),showAlert3()">Add To Cart</button>
+                    </div>
+        </div>
+        <div class="Products-list">
+                    <div class="image">
+                           <img src="images/Headphones.jpeg">
+                    </div>
+                    <div class="product">
+                        <h1>HEADPHONES</h1>
+                        <p>$20.00</p>
+                        <button class="Beta" onclick="addToCart('HEADPHONES', 20.00),showAlert4()">Add To Cart</button>
+                </div>
+        </div>
+        <div class="Products-list">
+                    <div class="image">
+                           <img src="images/Console 2.jpg">
+                    </div>
+                    <div class="product">
+                        <h1>CONSOLE</h1>
+                        <p>$199.00</p>
+                        <button class="Beta" onclick="addToCart('CONSOLE', 199.00),showAlert5()">Add To Cart</button>
+                </div>
+        
+        </div>
+        <div class="Products-list">
+                    <div class="image">
+                           <img src="images/Mouse.jpg">
+                    </div>
+                    <div class="product">
+                        <h1>MOUSE</h1>
+                        <p>$7.49</p>
+                        <button class="Beta" onclick="addToCart('MOUSE', 7.49),showAlert6()">Add To Cart</button>
+                    </div>
+        </div>
+        <div class="Products-list">
+                    <div class="image">
+                           <img src="images/Accessories.jpg">
+                    </div>
+                    <div class="product">
+                        <h1>ACCESSORIES</h1>
+                        <p>$7.79</p>
+                        <button class="Beta" onclick="addToCart('ACCESSORIES', 7.79),showAlert7()">Add To Cart</button>
+                  </div>
+        </div>
+        <div class="Products-list">
+                    <div class="image">
+                           <img src="images/keyboard.jpg">
+                    </div>
+                    <div class="product">
+                        <h1>KEYBOARD</h1>
+                        <p>$19.89</p>
+                        <button class="Beta" onclick="addToCart('KEYBOARD', 19.89),showAlert8()">Add To Cart</button>
+                    </div>
+        </div>     
+            </div>
+            <div class="contact-right">
+                <h1>Your Cart</h1>
+                <ul id="cart-items">
+                    <!-- Cart items will be added here dynamically -->
+                </ul>
+                <h4>Total: $<span id="total">0.00</span></h4>
+                <div class="cart-btn">
+             <button class="btn btn2" id="buyButton">Buy Now</button></a>
+                <button class="btn btn2 bb" onclick="clearCart()">Clear Cart</button>
+                     <div class="contactForm1">
+                        <form id="buyForm" style="display: none;">
+                            <h3>Your Order -</h3>
+                            <div class="inputBox">
+                                <input type="text" name="" required="required">
+                                <span>Full Name</span>
+                            <div class="inputBox">
+                                <input type="email" name="" required="required">
+                                <span>Email</span>
+                            <div class="inputBox">
+                                <input type="number" name="" required="required">
+                                <span>Contact no</span>
+                                <div class="inputBox">
+                                <textarea name="Message" rows="4" required></textarea>
+                                <span>Your Full Address</span>
+                            <div class="inputBox"><label>Pay  Total  Amount  From  Cart</label><br>
+                                <img src="images/QR.jpg" width="150px" height="150px"><br>
+                                <input type="file">
+                            <div class="inputBox">
+                                <input type="submit" class="btn btn2" onclick="showAlertbuy()" value="Buy">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <script src="cart.js"></script>
+            </div>
+            <script src="script.js"></script>
+        </div>
+    </div>
+    
+</div>
+
+<script>
+    const buyButton = document.getElementById('buyButton');
+    const buyForm = document.getElementById('buyForm');
+    const cartItems = document.getElementById('cartitem');
+
+    // Simulated cart items (replace with actual data)
+    const selectedItems = ['cartitem', 'Item 2', 'Item 3'];
+
+    buyButton.addEventListener('click', () => {
+        buyForm.style.display = 'block';
+        cartItems.innerHTML = `Selected items: ${selectedItems.join(', ')}`;
+    });
+</script>
+<script>
+    function showAlert1() {
+        alert("You Have Selected 'PC COMBO' . Do You Want to Add it to Your Cart");
+        location.reload();
+    }
+    function showAlert2() {
+        alert("You Have Selected 'CPU COMBO' . Do You Want to Add it to Your Cart");
+        location.reload();
+    }
+    function showAlert3() {
+        alert("You Have Selected 'MOUSEPAD' . Do You Want to Add it to Your Cart");
+        location.reload();
+    }
+    function showAlert4() {
+        alert("You Have Selected 'HEADPHONES' . Do You Want to Add it to Your Cart");
+        location.reload();
+    }
+    function showAlert5() {
+        alert("You Have Selected 'CONSOLE' . Do You Want to Add it to Your Cart");
+        location.reload();
+    }
+    function showAlert6() {
+        alert("You Have Selected 'MOUSE' . Do You Want to Add it to Your Cart");
+        location.reload();
+    }
+    function showAlert7() {
+        alert("You Have Selected 'ACCESSORIES' . Do You Want to Add it to Your Cart");
+        location.reload();
+    }
+    function showAlert8() {
+        alert("You Have Selected 'KEYBOARD' . Do You Want to Add it to Your Cart");
+        location.reload();
+    }
+    function showAlertbuy() {
+        alert("Your Order Is Placed It Will Be Delivered To You Soon 😊😎❤️");
+        location.reload();
+        clearCart();
+    }
+</script>
+</body>
+</html>
